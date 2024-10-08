@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+header {
+    padding: 45px;
+    text-align: center;
+    background-color: rgba(87, 87, 87, 0.007);
+    position: fixed;
+    right: 0;
+    width: 100%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.007);
+}
+
+main {
+
+    height: 11100px;
+    padding: 100px 0;
+    background-color: rgb(0, 0, 0);
+    background-image: url(./img/dark-background-abstract-background-network-3d-background-1920x1080-8324.png) ;
+    background-repeat: no-repeat; 
+}
+h1 {
+    padding-bottom: 50px;
+}
+ .links{
+    text-decoration: none;
+    color: grey;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin: 0 15px;
+    
+    
+ }
+ .links:hover{
+    color: black;
+ }
+#sobre{
+    padding: 100px;
+    padding-top: 100px;
+
+    text-align: right;
+}
+#a{
+    display: inline-block;;
+}
+#b{
+
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.479);
+    display: inline-block;
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.733);
+}
+
+#skills{
+    padding: 100px;
+    padding-top: 100px;
+    vertical-align: top;
+}
+.card {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.479);
+    width: 190px;
+
+    margin: 100px 20px;
+    border-radius: 20px;
+    background-color: rgba(99, 99, 99, 0.219);
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+}
+.card:hover{
+    background-color: rgba(99, 99, 99, 0.479);
+}
+.logos {
+    width: 150px;
+    height: 150px;  
+    border-radius: 20px;
+}
+#inf {
+    padding: 30px;
+    background-color:rgba(99, 99, 99, 0.219); 
+    border-radius: 20px;
+    text-align: center;
+}
+#projetos{
+    padding: 100px;
+    padding-top: 100px;
+}
+.pj{
+    border-radius: 20px;
+    background-color: rgba(99, 99, 99, 0.219);
+    margin: 20px;
+    display: inline-block;
+    padding: 30px;
+    
+}
+.pr{
+    border-radius: 20px;
+}
