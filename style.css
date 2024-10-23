@@ -106,20 +106,16 @@ h1 {
     width: 320px;
 }
 
-/* Estilos para telas menores que 768px (tablets e smartphones) */
+/* Media Query para telas menores que 768px (tablets e smartphones) */
 @media (max-width: 768px) {
-    header {
-        padding: 20px;
-    }
-
-    main {
-        padding: 50px 0;
-        background-size: cover;
+    #sobre {
+        padding: 50px 20px;
+        text-align: center;
     }
 
     #b {
         width: 100%;
-        padding: 20px;
+        max-width: 100%; /* Ocupará toda a largura da tela */
         text-align: center;
     }
 
@@ -127,22 +123,18 @@ h1 {
         padding: 50px;
     }
 
-    .card {
+    .card, .pj {
         width: 100%;
         margin: 20px 0;
     }
 
-    .pj {
+    .logos, .pr {
         width: 100%;
-        margin: 20px 0;
-    }
-
-    .pr {
-        width: 100%;
+        height: auto;
     }
 }
 
-/* Estilos para telas menores que 480px (smartphones) */
+/* Media Query para telas menores que 480px (smartphones) */
 @media (max-width: 480px) {
     header {
         padding: 10px;
@@ -153,25 +145,21 @@ h1 {
         margin: 10px 0;
     }
 
-    #skills, #projetos {
-        padding: 20px;
+    #sobre, #projetos {
+        padding: 20px 10px;
     }
 
-    .card {
+    #b, .pj {
         width: 100%;
-        margin: 10px 0;
+        max-width: 100%;
     }
 
-    .logos {
-        width: 80%;
+    .logos, .pr {
+        width: 100%;
         height: auto;
     }
 
     .pj {
-        width: 100%;
-    }
-
-    .pr {
-        width: 100%;
+        padding: 20px;
     }
 }
