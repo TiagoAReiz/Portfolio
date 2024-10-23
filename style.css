@@ -124,12 +124,12 @@ h1 {
     }
 
     .card, .pj {
-        width: 100%;
+        width: 80px;
         margin: 20px 0;
     }
 
     .logos, .pr {
-        width: 100%;
+        width: 70px;
         height: auto;
     }
 }
@@ -150,12 +150,12 @@ h1 {
     }
 
     #b, .pj {
-        width: 100%;
-        max-width: 100%;
+        width: 80px;
+        
     }
 
     .logos, .pr {
-        width: 100%;
+        width: 70px;
         height: auto;
     }
 
