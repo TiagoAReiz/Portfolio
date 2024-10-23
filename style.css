@@ -123,12 +123,12 @@ h1 {
     }
 
     .card, .pj {
-        width: 80px;
+        width: 90px;
         margin: 20px 0;
     }
 
     .logos, .pr {
-        width: 75px;
+        width: 85px;
         height: auto;
     }
 }
@@ -149,12 +149,12 @@ h1 {
     }
 
     #b, .pj {
-        width: 180px;
+        width: 90px;
         
     }
 
     .logos, .pr {
-        width: 75px;
+        width: 85px;
         height: auto;
     }
 
