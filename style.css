@@ -114,8 +114,7 @@ h1 {
     }
 
     #b {
-        width: 100%;
-        max-width: 100%; /* Ocupará toda a largura da tela */
+        width: 180px
         text-align: center;
     }
 
@@ -129,7 +128,7 @@ h1 {
     }
 
     .logos, .pr {
-        width: 70px;
+        width: 75px;
         height: auto;
     }
 }
@@ -150,12 +149,12 @@ h1 {
     }
 
     #b, .pj {
-        width: 80px;
+        width: 180px;
         
     }
 
     .logos, .pr {
-        width: 70px;
+        width: 75px;
         height: auto;
     }
 
