@@ -38,7 +38,7 @@ let descriptions = {
 skills.forEach((skill) => {
   let element = document.getElementById(skill)
   element.addEventListener("click", function () {
-    document.getElementById("inf").style.backgroundColor = "grey"
+    document.getElementById("inf").style.backgroundColor = "rgba(99, 99, 99, 0.219)"
     // Atualiza o conteúdo do elemento com o ID "inf" com o texto correspondente à skill clicada
     document.getElementById("inf").innerHTML = descriptions[skill]
   })
