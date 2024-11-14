@@ -128,7 +128,7 @@ h1 {
     }
 
     #b {
-        width: 180px
+        width: 180px;
         text-align: center;
     }
 
@@ -145,7 +145,6 @@ h1 {
         width: 85px;
         height: auto;
     }
-}
 
 /* Media Query para telas menores que 480px (smartphones) */
 @media (max-width: 480px) {
@@ -177,4 +176,5 @@ h1 {
     .pj {
         padding: 20px;
     }
+}
 }
