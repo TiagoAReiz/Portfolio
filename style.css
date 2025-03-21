@@ -1,180 +1,436 @@
+
 * {
     margin: 0;
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-}
-header {
-    padding: 45px;
+    vertical-align: middle;
+    font-family: "Lexend Exa", serif;
+  }
+  #header {
+    height: 120px;
+    padding-top: 70px;
+    padding-left: 50px;
+    background-image: linear-gradient(to left, #8c52ffb2 1%, white 50%);
+    
+  }
+  #links {
+    display: inline-flex;
+  }
+  .links {
+    background-color: #dccbff;
+    display: inline-flex;
+    margin: 5px;
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    vertical-align: middle;
     text-align: center;
-    background-color: rgba(87, 87, 87, 0.007);
-    position: fixed;
-    right: 0;
-    width: 100%;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.007);
-}
-
-main {
-
-    height: 11100px;
-    padding: 100px 0;
-    background-color: rgb(0, 0, 0);
-    background-image: url(./img/dark-background-abstract-background-network-3d-background-1920x1080-8324.png) ;
-    background-repeat: no-repeat; 
-}
-#contato { 
-    text-align: right;
-    margin: 0 30px;
-    font-weight: bold;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.linksR {
-    background-color: black;
-    border-radius:50px;
-    padding: 1.5px 4.5px;
-}
-.linksR:hover {
-    background-color: rgb(64, 64, 64);
-}
-h1 {
-    padding-bottom: 50px;
-}
- .links{
     text-decoration: none;
+    padding: 12px;
+    font-size: 15px;
+  
+    transition: 0.35s;
+  }
+  #links:hover > :not(:hover) {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+  #menu {
+    display: inline-flex;
+    margin: 0 0 0 180vh;
+  }
+  .menu {
+    display: inline-flex;
+    margin: 5px;
+    border-radius: 50%;
     color: rgb(255, 255, 255);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    margin: 0 15px;
-    
-    
- }
- .links:hover{
-    color: rgb(64, 64, 64);
- }
-#sobre{
-    padding: 100px;
-    padding-top: 100px;
-
+    text-align: center;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 20px;
+    transition: 1s;
+  }
+  .menu:hover {
+    cursor: pointer;
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  @media (max-width: 1600px) {
+    #menu {
+      margin: 0 0 0 140vh;
+    }
+  }
+  @media (max-width: 1200px) {
+    #menu {
+      margin: 0 0 0 130vh;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #menu {
+      margin: 0 0 0 25dvh;
+    }
+  }
+  #inicio {
+    background-image: linear-gradient(to left, #8c52ffb2 1%, white 50%);
+    height: 65dvh;
+    text-align: center;
+    padding: 130px 0 0 0;
+  }
+  * {
+    margin: 0;
+    font-family: "Lexend Exa", serif;
+  }
+  #left {
+    display: inline-flex;
+    width: 49%;
+    vertical-align: middle;
+  }
+  #nome_tec {
+    margin: 0 50px 0px 50px;
+  }
+  #nome {
+    font-size: 100px;
+    font-family: "Dela Gothic One", serif;
+    font-weight: lighter;
+  }
+  #and {
+    margin: 0 15px 0 15px;
+  }
+  #line {
+    border: #8c52ff 1px solid;
+    width: 350px;
+    height: 0;
+    margin: 40px 0 0 50px;
+  }
+  #tec {
+    display: inline-flex;
+  
+    font-size: 23px;
+  }
+  .tec {
+    background-color: #dccbff;
+    color: #8c52ff;
+    border-radius: 20px;
+    padding: 5px;
+  }
+  
+  #right {
+    display: inline-flex;
+    width: 49%;
+    font-size: 23px;
     text-align: right;
-}
-#a{
-    display: inline-block;;
-}
-#b{
-
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.479);
-    display: inline-block;
+    vertical-align: middle;
+  }
+  #about {
+    margin: 0 30px 0px 200px;
+  }
+  #tituloP {
+    margin: 100px 0 40px 150px;
+  }
+  #tituloP h1 {
+    font-size: 80px;
+    font-family: "Dela Gothic One", serif;
+    display: inline-flex;
+  }
+  .lineP {
+    width: 110dvh;
+    display: inline-flex;
+    background-color: #8c52ff;
+    height: 4px;
+    border-radius: 15px;
+    margin: 0 0 15px 120px;
+  }
+  
+  #projetos {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100dvh;
+  }
+  .projeto {
+    width: 120dvh;
+    margin: 60px auto;
+    border-radius: 30px;
+    background-color: #8c52ff;
+    transition: 0.35s;
+    text-align: left;
+    padding: 5dvh 0dvh 5dvh 5dvh;
+  }
+  .projeto:hover {
+    width: 150dvh;
+  }
+  .projeto:hover .descricao {
+    opacity: 1;
     width: 400px;
-    padding: 30px;
+  }
+  .projeto:hover #nomeT {
+    margin: 5dvh 0 0 20px;
+    font-size: 20px;
+  }
+  
+  .projeto div img {
+    height: 50dvh;
+    display: inline-flex;
+    border-radius: 30px;
+  }
+  .conteudoP {
+    width: 70dvh;
+    display: inline-flex;
+  }
+  #nomeT {
+    margin: 15dvh 0 0 20px;
+    transition: 0.35s;
+    font-size: 28px;
+  }
+  #nomeT p {
+    display: inline-flex;
+    background-color: white;
+    margin: 0 0.5dvh 0 0;
+    padding: 5px;
+    border-radius: 15px;
+    color: #8c52ff;
+    font-size: 19.1;
+  }
+  #tituloNH {
+    color: white;
+    font-weight: 400;
+  }
+  .descricao {
+    opacity: 0;
+    margin: 200px -55px 0 -20px;
+    transition: 0.35s;
+    color: white;
+    font-size: 20px;
+    min-width: 400px;
+  }
+  
+  #curriculo {
+    width: 100%;
+    min-height: 100dvh;
+  }
+  #tituloC {
+    font-size: 80px;
+    font-family: "Dela Gothic One", serif;
+    display: inline-flex;
+    background-color: #8c52ff;
+    color: white;
+    padding: 15px 40px 15px 350px;
+    margin-left: -250px;
+    border-radius: 80px;
+  }
+  #conteudoC {
+    height: 120dvh;
+    border: #8c52ff 2px solid;
+    width: 1300px;
+    margin: 120px auto;
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.733);
-}
-
-#skills{
-    padding: 100px;
-    padding-top: 100px;
-    vertical-align: top;
-}
-.card {
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.479);
-    width: 190px;
-
-    margin: 100px 20px;
-    border-radius: 20px;
-    background-color: rgba(99, 99, 99, 0.219);
-    display: inline-block;
+  }
+  @media (max-width: 1600px) {
+    #tituloP h1 {
+      font-size: 70px;
+    }
+  
+    .lineP {
+      width: 90dvh;
+    }
+  
+    .projeto {
+      width: 120dvh;
+      padding: 3dvh 0dvh 3dvh 3dvh;
+    }
+    .projeto:hover {
+      width: 150dvh;
+    }
+    .projeto div img {
+      height: 40dvh;
+    }
+  }
+  @media (max-width: 1200px) {
+    #nome {
+      font-size: 80px;
+    }
+    #tec {
+      font-size: 18px;
+    }
+    .tec {
+      border-radius: 50px;
+      padding: 7px;
+    }
+    #right {
+      font-size: 18px;
+    }
+    #tituloP {
+      margin: 40px;
+    }
+    #tituloP h1 {
+      font-size: 70px;
+    }
+    .lineP {
+      width: 85dvh;
+    }
+  
+    .projeto {
+      width: 120dvh;
+      padding: 3dvh 0dvh 3dvh 3dvh;
+    }
+    .projeto:hover {
+      width: 15 0dvh;
+    }
+    .projeto div img {
+      height: 40dvh;
+      margin: 15px 0 0 0;
+    }
+    #tituloNH {
+      font-size: 40px;
+    }
+    #nomeT p {
+      font-size: 15px;
+    }
+    .descricao {
+      font-size: 15px;
+      min-width: 300px;
+    }
+  
+    #tituloC {
+      font-size: 70px;
+    }
+    #conteudoC {
+      width: 900px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #inicio {
+      height: 100dvh;
+      padding: 0px 0 0 0;
+      display: block;
+    }
+    #left {
+    }
+    #nome_tec {
+      margin: 0 0px 80px 0px;
+      display: block;
+      text-align: center;
+    }
+    #nome {
+      font-size: 50px;
+      margin: 100px 0 0 -400px;
+    }
+    #tec {
+      font-size: 18px;
+    }
+    .tec {
+      border-radius: 50px;
+      padding: 7px;
+    }
+    #line {
+      opacity: 0;
+    }
+    #right {
+      font-size: 18px;
+      display: block;
+      width: 500px;
+    }
+    #tituloP {
+      margin: 40px;
+    }
+    #tituloP h1 {
+      font-size: 50px;
+    }
+    .lineP {
+      width: 85dvh;
+    }
+  
+    .projeto {
+      width: 50dvh;
+    }
+    .conteudoP {
+      width: 40dvh;
+      display: block;
+    }
+    .projeto .descricao {
+      opacity: 1;
+      width: 100px;
+      margin: 40px 15px 0 50px;
+    }
+    .projeto #nomeT {
+      margin: 5dvh 0 0 20px;
+      font-size: 20px;
+    }
+  
+    .projeto div img {
+      height: 30dvh;
+      margin: 15px 0 0 15px;
+    }
+    #tituloNH {
+      font-size: 40px;
+    }
+    #nomeT p {
+      font-size: 15px;
+    }
+    .descricao {
+      font-size: 15px;
+      min-width: 300px;
+    }
+    .lineP {
+      opacity: 0;
+    }
+    #tituloC {
+      font-size: 50px;
+    }
+    #conteudoC {
+      width: 400px;
+    }
+  }
+  #footer {
+    width: 100%;
+    background-image: linear-gradient(to top, #8c52ffb2 5%, white 100%);
+    padding: 300px 0 100px 0;
+  }
+  #contate {
+    margin: 0 0 0 50px;
+    color: white;
+  }
+  #contate h1 {
+    margin-bottom: 20px;
+  }
+  #contate a {
+    font-size: 23px;
+  }
+  .links {
+    background-color: #dccbff;
+    display: inline-flex;
+    margin: 5px;
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    vertical-align: middle;
     text-align: center;
-    padding: 20px;
-}
-.card:hover{
-    background-color: rgba(99, 99, 99, 0.479);
-}
-.logos {
-    width: 150px;
-    height: 150px;  
-    border-radius: 20px;
-}
-#inf {
-    padding: 30px;
-    background-color:black; 
-    border-radius: 20px;
-    text-align: center;
-}
-#projetos{
-    padding: 100px;
-    padding-top: 100px;
-}
-.pj{
-    border-radius: 20px;
-    background-color: rgba(99, 99, 99, 0.219);
-    margin: 20px;
-    display: inline-block;
-    padding: 30px;
-    
-}
-.pj:hover{
-    background-color: rgba(99, 99, 99, 0.479);
-}
-.pr{
-    border-radius: 20px;
-    width: 320px;
-}
-
-/* Media Query para telas menores que 768px (tablets e smartphones) */
-@media (max-width: 768px) {
-    #sobre {
-        padding: 50px 20px;
-        text-align: center;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 15px;
+  
+    transition: 0.35s;
+  }
+  #linksrodape:hover > :not(:hover) {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+  #linksrodape {
+    margin-left: 1600px;
+  }
+  @media (max-width: 1600px) {
+    #linksrodape {
+      margin: 0 0 0 1300px;
     }
-
-    #b {
-        width: 180px;
-        text-align: center;
+  }
+  @media (max-width: 1200px) {
+    #linksrodape {
+      margin: 0 0 0 900px;
     }
-
-    #skills, #projetos {
-        padding: 50px;
+  }
+  
+  @media (max-width: 600px) {
+    #footer {
+      width: 600px;
     }
-
-    .card, .pj {
-        width: 90px;
-        margin: 20px 0;
+    #linksrodape {
+      margin: 0 0 0 300px;
     }
-
-    .logos, .pr {
-        width: 85px;
-        height: auto;
-    }
-
-/* Media Query para telas menores que 480px (smartphones) */
-@media (max-width: 480px) {
-    header {
-        padding: 10px;
-    }
-
-    .links {
-        display: block;
-        margin: 10px 0;
-    }
-
-    #sobre, #projetos {
-        padding: 20px 10px;
-    }
-    #b {
-        width: 220px
-    }
-   .pj {
-        width: 90px;
-        
-    }
-
-    .logos, .pr {
-        width: 85px;
-        height: auto;
-    }
-
-    .pj {
-        padding: 20px;
-    }
-}
-}
+  }
+  
