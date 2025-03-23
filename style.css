@@ -262,19 +262,30 @@
       font-size: 70px;
     }
     .lineP {
-      width: 85dvh;
+      display: none;
     }
   
     .projeto {
-      width: 120dvh;
-      padding: 3dvh 0dvh 3dvh 3dvh;
+      width: 35dvh;
     }
-    .projeto:hover {
-      width: 15 0dvh;
+    
+    .conteudoP {
+      width: 40dvh;
+      display: block;
     }
+    .projeto .descricao {
+      opacity: 1;
+      width: 100px;
+      margin: 40px 25px 0 0px;
+    }
+    .projeto #nomeT {
+      margin: 5dvh 0 0 20px;
+      font-size: 20px;
+    }
+  
     .projeto div img {
-      height: 40dvh;
-      margin: 15px 0 0 0;
+      height: 20dvh;
+      margin: 15px 0 0 15px;
     }
     #tituloNH {
       font-size: 40px;
@@ -291,7 +302,7 @@
       font-size: 70px;
     }
     #conteudoC {
-      width: 900px;
+      width: 600px;
     }
   }
   
@@ -345,7 +356,7 @@
     }
   
     .projeto {
-      width: 50dvh;
+      width: 35dvh;
     }
     
     .conteudoP {
@@ -363,7 +374,7 @@
     }
   
     .projeto div img {
-      height: 30dvh;
+      height: 20dvh;
       margin: 15px 0 0 15px;
     }
     #tituloNH {
