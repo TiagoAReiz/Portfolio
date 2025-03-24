@@ -321,6 +321,7 @@
     }
     #left {
       width: 100%;
+      text-align: center;
     }
     #nome_tec {
       margin: 0 0px 80px 0px;
@@ -347,7 +348,7 @@
       width: 100%;
       margin: 0 15px 30px 15px;
       padding: 0;
-      text-align: left;
+      text-align: center;
     }
     #about {
       margin: 15px;
@@ -363,11 +364,11 @@
     }
   
     .projeto {
-      width: 35dvh;
+      width: 35vh;
     }
     
     .conteudoP {
-      width: 40dvh;
+      width: 40vh;
       display: block;
     }
     .projeto .descricao {
@@ -376,12 +377,12 @@
       margin: 40px 25px 0 0px;
     }
     .projeto #nomeT {
-      margin: 5dvh 0 0 20px;
+      margin: 5vh 0 0 20px;
       font-size: 20px;
     }
   
     .projeto div img {
-      height: 20dvh;
+      height: 20vh;
       margin: 15px 0 0 15px;
     }
     #tituloNH {
