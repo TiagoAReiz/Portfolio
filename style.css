@@ -316,6 +316,7 @@
       height: 130dvh;
       padding: 0px 0 0 0;
       display: block;
+      width: 100%;
       
     }
     #left {
@@ -327,7 +328,7 @@
     }
     #nome {
       font-size: 40px;
-      margin: 100px 0 0 -400px;
+      margin: 100px 0 0 0;
     }
     #tec {
       font-size: 18px;
