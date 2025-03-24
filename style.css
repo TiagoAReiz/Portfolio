@@ -270,7 +270,7 @@
     }
     
     .conteudoP {
-      width: 40dvh;
+      width: 25dvh;
       display: block;
     }
     .projeto .descricao {
@@ -286,6 +286,17 @@
     .projeto div img {
       height: 20dvh;
       margin: 15px 0 0 15px;
+    }
+    .projeto:hover {
+      width: 35dvh;
+    }
+    .projeto:hover .descricao {
+      opacity: 1;
+      width: 100px
+    }
+    .projeto:hover #nomeT {
+      margin: 5dvh 0 0 20px;
+      font-size: 20px;
     }
     #tituloNH {
       font-size: 40px;
@@ -306,7 +317,8 @@
     }
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
+    
     #inicio {
       height: 130dvh;
       padding: 0px 0 0 0;
@@ -407,7 +419,7 @@
       
     }
     #conteudoC {
-      width: 300px;
+      width: 65%;
     }
   }
   #footer {
