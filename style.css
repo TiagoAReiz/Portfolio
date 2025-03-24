@@ -358,6 +358,17 @@
     .projeto {
       width: 35dvh;
     }
+    .projeto:hover {
+      width: 35dvh;
+    }
+    .projeto:hover .descricao {
+      opacity: 1;
+      width: 100px
+    }
+    .projeto:hover #nomeT {
+      margin: 5dvh 0 0 20px;
+      font-size: 20px;
+    }
     
     .conteudoP {
       width: 40dvh;
