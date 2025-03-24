@@ -34,7 +34,6 @@
   }
   #menu {
     display: inline-flex;
-    margin: 0 0 0 180vh;
   }
   .menu {
     display: inline-flex;
@@ -53,18 +52,18 @@
   }
   @media (max-width: 1600px) {
     #menu {
-      margin: 0 0 0 140vh;
+
     }
   }
   @media (max-width: 1200px) {
     #menu {
-      margin: 0 0 0 130vh;
+
     }
   }
   
   @media (max-width: 600px) {
     #menu {
-      margin: 0 0 0 25dvh;
+
     }
   }
   #inicio {
@@ -152,17 +151,7 @@
     text-align: left;
     padding: 5dvh 0dvh 5dvh 5dvh;
   }
-  .projeto:hover {
-    width: 150dvh;
-  }
-  .projeto:hover .descricao {
-    opacity: 1;
-    width: 400px;
-  }
-  .projeto:hover #nomeT {
-    margin: 5dvh 0 0 20px;
-    font-size: 20px;
-  }
+
   
   .projeto div img {
     height: 50dvh;
@@ -221,6 +210,19 @@
     margin: 120px auto;
     border-radius: 20px;
   }
+  @media (min-width: 1200px){
+    .projeto:hover {
+      width: 150dvh;
+    }
+    .projeto:hover .descricao {
+      opacity: 1;
+      width: 400px;
+    }
+    .projeto:hover #nomeT {
+      margin: 5dvh 0 0 20px;
+      font-size: 20px;
+    }
+  }
   @media (max-width: 1600px) {
     #tituloP h1 {
       font-size: 70px;
@@ -234,9 +236,7 @@
       width: 120dvh;
       padding: 3dvh 0dvh 3dvh 3dvh;
     }
-    .projeto:hover {
-      width: 150dvh;
-    }
+    
     .projeto div img {
       height: 40dvh;
     }
@@ -266,17 +266,18 @@
     }
   
     .projeto {
-      width: 35dvh;
+      width: 45%;
+      padding: 25px;
     }
     
     .conteudoP {
-      width: 25dvh;
+      width: 30dvh;
       display: block;
     }
     .projeto .descricao {
       opacity: 1;
-      width: 100px;
-      margin: 40px 25px 0 0px;
+      min-width: 10dvh;
+      margin: 20px 0  0 0px;
     }
     .projeto #nomeT {
       margin: 5dvh 0 0 20px;
@@ -287,17 +288,6 @@
       height: 20dvh;
       margin: 15px 0 0 15px;
     }
-    .projeto:hover {
-      width: 35dvh;
-    }
-    .projeto:hover .descricao {
-      opacity: 1;
-      width: 100px
-    }
-    .projeto:hover #nomeT {
-      margin: 5dvh 0 0 20px;
-      font-size: 20px;
-    }
     #tituloNH {
       font-size: 40px;
     }
@@ -306,7 +296,7 @@
     }
     .descricao {
       font-size: 15px;
-      min-width: 300px;
+      min-width: 45dvh;
     }
   
     #tituloC {
@@ -369,17 +359,6 @@
   
     .projeto {
       width: 35dvh;
-    }
-    .projeto:hover {
-      width: 35dvh;
-    }
-    .projeto:hover .descricao {
-      opacity: 1;
-      width: 100px
-    }
-    .projeto:hover #nomeT {
-      margin: 5dvh 0 0 20px;
-      font-size: 20px;
     }
     
     .conteudoP {
