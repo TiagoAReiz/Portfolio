@@ -340,7 +340,7 @@
       padding: 7px;
     }
     #line {
-      opacity: 0;
+      display: none;
     }
     #right {
       font-size: 18px;
