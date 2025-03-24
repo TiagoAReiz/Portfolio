@@ -313,7 +313,8 @@
       height: 130dvh;
       padding: 0px 0 0 0;
       display: block;
-      
+      width: 100%;
+  
     }
     #nome_tec {
       margin: 0 0px 80px 0px;
@@ -322,7 +323,7 @@
     }
     #nome {
       font-size: 40px;
-      margin: 100px 0 0 0;
+      margin: 100px 0 0 -200px;
     }
     #tec {
       font-size: 18px;
