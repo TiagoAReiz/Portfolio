@@ -320,6 +320,7 @@
       
     }
     #left {
+      width: 100%;
     }
     #nome_tec {
       margin: 0 0px 80px 0px;
@@ -343,7 +344,7 @@
     #right {
       font-size: 18px;
       display: block;
-      width: 40dvh;
+      width: 100%;
       margin: 0 15px 30px 15px;
       padding: 0;
       text-align: left;
