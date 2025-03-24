@@ -4,6 +4,8 @@
     margin: 0;
     vertical-align: middle;
     font-family: "Lexend Exa", serif;
+  overflow-x: hidden; /* Impede o scroll horizontal e cantos brancos */
+
   }
   #header {
     height: 120px;
