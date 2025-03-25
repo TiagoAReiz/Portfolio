@@ -157,7 +157,7 @@
 
   
   .projeto div img {
-    height: 50dvh;
+   width: 50dvh;
     display: inline-flex;
     border-radius: 30px;
   }
@@ -241,7 +241,7 @@
     }
     
     .projeto div img {
-      height: 40dvh;
+      width: 40dvh;
     }
   }
   @media (max-width: 1200px) {
@@ -288,7 +288,7 @@
     }
   
     .projeto div img {
-      height: 20dvh;
+      width: 20dvh;
       margin: 15px 0 0 15px;
     }
     #tituloNH {
@@ -383,7 +383,7 @@
     }
   
     .projeto div img {
-      height: 200px;
+      width: 70%;
       margin: 15px auto;
     }
     #tituloNH {
