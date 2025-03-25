@@ -369,7 +369,7 @@
     }
     
     .conteudoP {
-      width: 90%;
+      width: 100%;
       display: block;
       text-align: center;
     }
@@ -379,7 +379,7 @@
       margin: 40px auto 40px auto;
     }
     .projeto #nomeT {
-      margin: 5vh 0 0 20px;
+      margin: 5vh 0 0 0;
       font-size: 20px;
     }
   
