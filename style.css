@@ -424,6 +424,10 @@
   #contate a {
     font-size: 23px;
   }
+  #email {
+    color : white;
+    text-decoration: none;
+  }
   .links {
     background-color: #dccbff;
     display: inline-flex;
