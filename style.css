@@ -164,6 +164,7 @@ overflow-x: hidden; /* Impede o scroll horizontal e cantos brancos */
 .conteudoP {
   width: 100%;
   display: inline-flex;
+  
 }
 #nomeT {
   margin: 20px 0 0 20px;
