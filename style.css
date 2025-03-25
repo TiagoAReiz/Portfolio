@@ -370,11 +370,12 @@
     .conteudoP {
       width: 90%;
       display: block;
+      text-align: center;
     }
     .projeto .descricao {
       opacity: 1;
-      width: 100px;
-      margin: 40px 25px 0 0px;
+      width: 50%;
+      margin: 40px auto 40px auto;
     }
     .projeto #nomeT {
       margin: 5vh 0 0 20px;
@@ -382,8 +383,8 @@
     }
   
     .projeto div img {
-      height: 20vh;
-      margin: 15px 0 0 15px;
+      height: 35%;
+      margin: 15px auto;
     }
     #tituloNH {
       font-size: 30px;
