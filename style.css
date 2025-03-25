@@ -394,7 +394,7 @@
     }
     .descricao {
       font-size: 12px;
-      min-width: 250px;
+      min-width: 40%;
     }
     .lineP {
       opacity: 0;
