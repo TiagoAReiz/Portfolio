@@ -101,6 +101,9 @@ overflow-x: hidden; /* Impede o scroll horizontal e cantos brancos */
   height: 0;
   margin: 40px 0 0 50px;
 }
+a{
+  text-decoration: none;
+  }
 #tec {
   display: inline-flex;
 
