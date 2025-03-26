@@ -12,7 +12,7 @@ body{
   height: 120px;
   padding-top: 70px;
   padding-left: 50px;
-  background-image: linear-gradient(to left, #8c52ffb2 1%, white 50%);
+  background-image: linear-gradient(to left, #dfcfff34 1%, white 50%);
   
 }
 #links {
@@ -73,7 +73,7 @@ body{
   }
 }
 #inicio {
-  background-image: linear-gradient(to left, #8c52ffb2 1%, white 50%);
+  background-image: linear-gradient(to left, #dfcfff34 1%, white 50%);
   height: 65dvh;
   text-align: center;
   padding: 130px 0 0 0;
@@ -420,7 +420,7 @@ a{
 }
 #footer {
   width: 100%;
-  background-image: linear-gradient(to top, #8c52ffb2 5%, white 100%);
+  background-image: linear-gradient(to top, #dfcfff34 5%, white 100%);
   padding: 150px 0 100px 0;
 }
 #contate {
