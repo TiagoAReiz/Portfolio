@@ -5,6 +5,9 @@
 overflow-x: hidden; /* Impede o scroll horizontal e cantos brancos */
 
 }
+body{
+  background-color: #8c52ff;
+}
 #header {
   height: 120px;
   padding-top: 70px;
@@ -147,9 +150,10 @@ a{
   margin: 0 auto;
   width: 100%;
   min-height: 100dvh;
+  background-color: white;
 }
 .projeto {
-  width: 50%;
+  width: 60%;
   margin: 60px auto;
   border-radius: 30px;
   background-color: #8c52ff;
@@ -160,7 +164,7 @@ a{
 
 
 .projeto div img {
- width: 400px;
+ width: 500px;
   display: inline-flex;
   border-radius: 30px;
 }
@@ -199,6 +203,7 @@ a{
 #curriculo {
   width: 100%;
   min-height: 100dvh;
+  background-color: white;
 }
 #tituloC {
   font-size: 80px;
@@ -219,7 +224,7 @@ a{
 }
 @media (min-width: 1200px){
   .projeto:hover {
-    width: 70%;
+    width: 80%;
   }
   .projeto:hover .descricao {
     opacity: 1;
@@ -239,7 +244,7 @@ a{
   }
 
   .projeto {
-    width: 50%;
+    width:60%;
     padding: 3dvh 3dvh 3dvh 3dvh;
   }
   
