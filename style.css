@@ -2,10 +2,9 @@
   margin: 0;
   vertical-align: middle;
   font-family: "Lexend Exa", serif;
-overflow-x: hidden; /* Impede o scroll horizontal e cantos brancos */
-
+  overflow-x: hidden;
 }
-body{
+body {
   background-color: #8c52ff;
 }
 #header {
@@ -13,7 +12,6 @@ body{
   padding-top: 70px;
   padding-left: 50px;
   background-image: linear-gradient(to left, #dfcfff34 1%, white 50%);
-  
 }
 #links {
   display: inline-flex;
@@ -29,7 +27,6 @@ body{
   text-decoration: none;
   padding: 12px;
   font-size: 15px;
-
   transition: 0.35s;
 }
 #links:hover > :not(:hover) {
@@ -39,11 +36,32 @@ body{
 #menu {
   display: inline-flex;
 }
+#menu-bar {
+  position: absolute;
+  right: 30px;
+  top: 110px;
+  transition: 1s;
+  text-align: center;
+  border-radius: 40px 0 40px 40px;
+  max-height: 0;
+  max-width: 30px;
+  background-color: #8c52ff;
+  overflow: hidden;
+}
+#menu-bar.active {
+  right: 30px;
+  top: 110px;
+  padding: 40px;
+  max-height: 200px;
+  max-width: 200px;
+  z-index: 0;
+}
 .menu {
-  background-color:#8c52ff;
+  z-index: 1;
+  background-color: #8c52ff;
   display: inline-flex;
   margin: 5px;
-  position:absolute;
+  position: absolute;
   right: 25px;
   top: 70px;
   border-radius: 50%;
@@ -52,35 +70,44 @@ body{
   text-decoration: none;
   padding: 12px;
   font-size: 25px;
+  transition: 1s;
+}
+.menu.active {
+  border-radius: 40% 40% 0 0;
+  padding: 12px 12px 40px 12px;
 }
 .menu:hover {
   cursor: pointer;
 }
-@media (max-width: 1600px) {
-  #menu {
-
-  }
+#menu-links {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
 }
-@media (max-width: 1200px) {
-  #menu {
-
-  }
+#menu-links.active {
+  opacity: 1;
+  visibility: visible;
 }
-
-@media (max-width: 600px) {
-  #menu {
-
-  }
+#menu-links li {
+  padding: 10px;
+  transition: 1s;
+}
+#menu-links li:hover {
+  background-color: #7530ff;
+  border-radius: 30px;
+}
+#menu-links li a {
+  color: white;
 }
 #inicio {
   background-image: linear-gradient(to left, #dfcfff34 1%, white 50%);
   height: 65dvh;
   text-align: center;
   padding: 130px 0 0 0;
-}
-* {
-  margin: 0;
-  font-family: "Lexend Exa", serif;
 }
 #left {
   display: inline-flex;
@@ -104,12 +131,11 @@ body{
   height: 0;
   margin: 40px 0 0 50px;
 }
-a{
+a {
   text-decoration: none;
-  }
+}
 #tec {
   display: inline-flex;
-
   font-size: 23px;
 }
 .tec {
@@ -118,7 +144,6 @@ a{
   border-radius: 20px;
   padding: 5px;
 }
-
 #right {
   display: inline-flex;
   width: 49%;
@@ -145,7 +170,6 @@ a{
   border-radius: 15px;
   margin: 0 0 15px 120px;
 }
-
 #projetos {
   margin: 0 auto;
   width: 100%;
@@ -161,17 +185,14 @@ a{
   text-align: left;
   padding: 5dvh 5dvh 5dvh 5dvh;
 }
-
-
 .projeto div img {
- width: 500px;
+  width: 500px;
   display: inline-flex;
   border-radius: 30px;
 }
 .conteudoP {
   width: 100%;
   display: inline-flex;
-  
 }
 #nomeT {
   margin: 20px 0 0 20px;
@@ -193,13 +214,12 @@ a{
 }
 .descricao {
   opacity: 0;
-  margin: 200px -700px 0 0 ;
+  margin: 200px -700px 0 0;
   transition: 0.35s;
   color: white;
   font-size: 20px;
   width: 400px;
 }
-
 #curriculo {
   width: 100%;
   min-height: 100dvh;
@@ -221,36 +241,68 @@ a{
   width: 1300px;
   margin: 120px auto;
   border-radius: 20px;
+  padding: 150px;
 }
-@media (min-width: 1200px){
+#footer {
+  width: 100%;
+  background-image: linear-gradient(to top, #dfcfff34 5%, white 100%);
+  padding: 150px 0 100px 0;
+}
+#contate {
+  margin: 0 0 0 45px;
+  color: white;
+}
+#contate h1 {
+  margin-bottom: 20px;
+}
+#contate a {
+  font-size: 23px;
+}
+#email {
+  color: white;
+  text-decoration: none;
+}
+#linksrodape:hover > :not(:hover) {
+  opacity: 0.4;
+  transform: scale(0.9);
+}
+#linksrodape {
+  margin: 25px 0 0 45px;
+}
+
+/* ===== MEDIA QUERIES agrupadas no final ===== */
+@media (min-width: 1200px) {
   .projeto:hover {
     width: 80%;
   }
   .projeto:hover .descricao {
     opacity: 1;
+    margin: 200px 0 0 400px;
   }
   .projeto:hover #nomeT {
     font-size: 20px;
-    
   }
 }
 @media (max-width: 1600px) {
+  #menu {
+  }
   #tituloP h1 {
     font-size: 70px;
   }
-
   .lineP {
     width: 90dvh;
   }
-
   .projeto {
-    width:60%;
+    width: 60%;
     padding: 3dvh 3dvh 3dvh 3dvh;
   }
-  
-
+  #linksrodape {
+    margin: 25px 0 0 35px;
+  }
 }
 @media (max-width: 1200px) {
+  #menu {
+  }
   #nome {
     font-size: 80px;
   }
@@ -261,10 +313,9 @@ a{
     border-radius: 50px;
     padding: 7px;
   }
-  #left{
+  #left {
     margin: 0;
   }
-
   #right {
     font-size: 18px;
     margin: 0;
@@ -278,12 +329,10 @@ a{
   .lineP {
     display: none;
   }
-
   .projeto {
     width: 45%;
     padding: 25px;
   }
-  
   .conteudoP {
     width: 100%;
     display: block;
@@ -298,9 +347,8 @@ a{
     margin: 5dvh 0 0 20px;
     font-size: 20px;
   }
-
   .projeto div img {
-    width:90%;
+    width: 90%;
     margin: 0 auto;
   }
   #tituloNH {
@@ -312,23 +360,22 @@ a{
   .descricao {
     font-size: 15px;
   }
-
   #tituloC {
     font-size: 70px;
   }
   #conteudoC {
     width: 600px;
   }
+  #linksrodape {
+    margin: 25px 0 0 25px;
+  }
 }
-
 @media (max-width: 768px) {
-  
   #inicio {
     height: 130dvh;
     padding: 0px 0 0 0;
     display: block;
     width: 100%;
-    
   }
   #left {
     width: 100%;
@@ -337,7 +384,6 @@ a{
   #nome_tec {
     margin: 0 auto 80px auto;
     display: block;
-    
   }
   #nome {
     font-size: 40px;
@@ -372,13 +418,12 @@ a{
   }
   .lineP {
     width: 85dvh;
+    opacity: 0;
   }
-
   .projeto {
     width: 65%;
     padding: 5dvh 3dvh 5dvh 3dvh;
   }
-  
   .conteudoP {
     width: 100%;
     display: block;
@@ -394,11 +439,9 @@ a{
     margin: 5vh 0 0 0;
     font-size: 20px;
   }
-
   .projeto div img {
     width: 100%;
     margin: 15px auto;
-    
   }
   #tituloNH {
     font-size: 30px;
@@ -406,70 +449,17 @@ a{
   #nomeT p {
     font-size: 12px;
   }
-  .lineP {
-    opacity: 0;
-  }
   #tituloC {
     font-size: 35px;
     padding: 15px 40px 15px 300px;
-    
   }
   #conteudoC {
     width: 65%;
   }
 }
-#footer {
-  width: 100%;
-  background-image: linear-gradient(to top, #dfcfff34 5%, white 100%);
-  padding: 150px 0 100px 0;
-}
-#contate {
-  margin: 0 0 0 45px;
-  color: white;
-}
-#contate h1 {
-  margin-bottom: 20px;
-}
-#contate a {
-  font-size: 23px;
-}
-#email {
-  color : white;
-  text-decoration: none;
-}
-.links {
-  background-color: #dccbff;
-  display: inline-flex;
-  margin: 5px;
-  border-radius: 50%;
-  color: rgb(0, 0, 0);
-  vertical-align: middle;
-  text-align: center;
-  text-decoration: none;
-  padding: 12px;
-  font-size: 15px;
-
-  transition: 0.35s;
-}
-#linksrodape:hover > :not(:hover) {
-  opacity: 0.4;
-  transform: scale(0.9);
-}
-#linksrodape {
-  margin: 25px 0 0 45px;
-}
-@media (max-width: 1600px) {
-  #linksrodape {
-    margin: 25px 0 0 35px;
-  }
-}
-@media (max-width: 1200px) {
-  #linksrodape {
-    margin: 25px 0 0 25px;
-  }
-}
-
 @media (max-width: 600px) {
+  #menu {
+  }
   #linksrodape {
     margin: 25px 0 0 15px;
   }
