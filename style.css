@@ -455,6 +455,7 @@ a {
   }
   #conteudoC {
     width: 65%;
+    padding: 5px;
   }
 }
 @media (max-width: 600px) {
@@ -462,5 +463,9 @@ a {
   }
   #linksrodape {
     margin: 25px 0 0 15px;
+  }
+    #conteudoC {
+    width: 65%;
+    padding: 5px;
   }
 }
