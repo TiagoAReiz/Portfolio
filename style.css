@@ -462,6 +462,7 @@ a {
   }
   #conteudoC {
     width: 65%;
+    padding: 5px;
   }
 }
 @media (max-width: 600px) {
