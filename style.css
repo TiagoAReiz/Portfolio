@@ -465,8 +465,12 @@ a {
     padding: 45px 5px;
     font-size: 11px;
   }
-  #conteudoC p {
-    font-size: 11px;
+  
+  #curriculo-escrita{
+    width: 250px;
+  }
+   #curriculo-escrita h2{
+    padding: 10px 0;
   }
 }
 @media (max-width: 600px) {
