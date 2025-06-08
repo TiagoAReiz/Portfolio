@@ -465,6 +465,9 @@ a {
     padding: 45px 5px;
     font-size: 11px;
   }
+  #conteudoC p {
+    font-size: 11px;
+  }
 }
 @media (max-width: 600px) {
   #menu {
