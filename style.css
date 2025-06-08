@@ -202,7 +202,7 @@ a {
 #nomeT p {
   display: inline-flex;
   background-color: white;
-  margin: 0 0.5dvh 0 0;
+  margin: 0 0.5dvh 5px 0;
   padding: 5px;
   border-radius: 15px;
   color: #8c52ff;
@@ -236,12 +236,19 @@ a {
   border-radius: 80px;
 }
 #conteudoC {
-  height: 120dvh;
   border: #8c52ff 2px solid;
-  width: 1300px;
+  width: 1000px;
   margin: 120px auto;
   border-radius: 20px;
   padding: 150px;
+  overflow: hidden;
+}
+#conteudoC h2 {
+  color: #7530ff;
+}
+#curriculo-escrita {
+  width: 800px;
+  margin: 0 auto;
 }
 #footer {
   width: 100%;
@@ -462,5 +469,16 @@ a {
   }
   #linksrodape {
     margin: 25px 0 0 15px;
+  }
+  #conteudoC {
+    width: 65%;
+    padding: 45px 5px;
+    font-size: 11px;
+  }
+  #curriculo-escrita{
+    width: 250px;
+  }
+  #curriculo-escrita h2{
+    padding: 10px 0;
   }
 }
