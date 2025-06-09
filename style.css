@@ -177,7 +177,7 @@ a {
   background-color: white;
 }
 .projeto {
-  width: 60%;
+  width: 50vh;
   margin: 60px auto;
   border-radius: 30px;
   background-color: #8c52ff;
@@ -186,7 +186,7 @@ a {
   padding: 5dvh 5dvh 5dvh 5dvh;
 }
 .projeto div img {
-  width: 500px;
+  width: 400px;
   display: inline-flex;
   border-radius: 30px;
 }
@@ -195,9 +195,12 @@ a {
   display: inline-flex;
 }
 #nomeT {
-  margin: 20px 0 0 20px;
+  margin: 20px 30px 0 20px;
   transition: 0.35s;
-  font-size: 28px;
+  font-size: 28px;  
+  position: relative;
+  
+  
 }
 #nomeT p {
   display: inline-flex;
@@ -213,12 +216,14 @@ a {
   font-weight: 400;
 }
 .descricao {
-  opacity: 0;
-  margin: 200px -700px 0 0;
-  transition: 0.35s;
   color: white;
-  font-size: 20px;
+  transition: 0.5s;
+  overflow: hidden;
+  opacity: 0;
   width: 400px;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-left: 80px;
 }
 #curriculo {
   width: 100%;
@@ -281,18 +286,18 @@ a {
 @media (min-width: 1200px) {
   .projeto:hover {
     width: 80%;
+    height: 100%;
   }
   .projeto:hover .descricao {
     opacity: 1;
-    margin: 200px 0 0 400px;
+    
   }
   .projeto:hover #nomeT {
     font-size: 20px;
   }
 }
 @media (max-width: 1600px) {
-  #menu {
-  }
+
   #tituloP h1 {
     font-size: 70px;
   }
@@ -308,8 +313,7 @@ a {
   }
 }
 @media (max-width: 1200px) {
-  #menu {
-  }
+
   #nome {
     font-size: 80px;
   }
@@ -474,8 +478,7 @@ a {
   }
 }
 @media (max-width: 600px) {
-  #menu {
-  }
+ 
   #linksrodape {
     margin: 25px 0 0 15px;
   }
