@@ -177,13 +177,14 @@ a {
   background-color: white;
 }
 .projeto {
-  width: 50vh;
+  width: 50vw;
   margin: 60px auto;
   border-radius: 30px;
   background-color: #8c52ff;
   transition: 0.35s;
   text-align: left;
   padding: 5dvh 5dvh 5dvh 5dvh;
+ 
 }
 .projeto div img {
   width: 400px;
@@ -191,13 +192,16 @@ a {
   border-radius: 30px;
 }
 .conteudoP {
-  width: 100%;
+  width: 100vw;
   display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+
 }
 #nomeT {
   margin: 20px 30px 0 20px;
   transition: 0.35s;
-  font-size: 28px;  
+  font-size: 25px;  
   position: relative;
   
   
@@ -209,7 +213,7 @@ a {
   padding: 5px;
   border-radius: 15px;
   color: #8c52ff;
-  font-size: 19.1;
+  font-size: 15px;
 }
 #tituloNH {
   color: white;
@@ -220,10 +224,12 @@ a {
   transition: 0.5s;
   overflow: hidden;
   opacity: 0;
-  width: 400px;
-  font-size: 24px;
+  width: 300px;
+  font-size: 16px;
   margin-top: 40px;
-  margin-left: 80px;
+  display: inline-flex;
+
+  
 }
 #curriculo {
   width: 100%;
@@ -282,31 +288,29 @@ a {
   margin: 25px 0 0 45px;
 }
 
-/* ===== MEDIA QUERIES agrupadas no final ===== */
-@media (min-width: 1200px) {
+
+
+@media (min-width: 1000px) {
   .projeto:hover {
-    width: 80%;
-    height: 100%;
+    width: 70vw;
+
   }
   .projeto:hover .descricao {
     opacity: 1;
     
   }
   .projeto:hover #nomeT {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 @media (max-width: 1600px) {
 
+  
   #tituloP h1 {
     font-size: 70px;
   }
   .lineP {
     width: 90dvh;
-  }
-  .projeto {
-    width: 60%;
-    padding: 3dvh 3dvh 3dvh 3dvh;
   }
   #linksrodape {
     margin: 25px 0 0 35px;
