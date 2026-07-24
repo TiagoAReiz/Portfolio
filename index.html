@@ -3,449 +3,431 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tiago Reiz — Software Engineer</title>
-  <meta name="description" content="Portfolio de Tiago Reiz, Software Engineer especializado em Java, Spring Boot, Python e Cloud (AWS · Azure)." />
+  <title>Tiago Reiz — Backend · IA/RAG · Sistemas Distribuídos</title>
+  <meta name="description" content="Portfolio de Tiago Reiz — Backend, IA generativa e RAG em produção. Java, Spring Boot, Python, NestJS, LangChain, AWS, Docker e Kubernetes." />
+  <meta property="og:title" content="Tiago Reiz — Backend · IA/RAG · Sistemas Distribuídos" />
+  <meta property="og:description" content="Backend bem estruturado e plataformas de IA generativa em produção. Java · Python · TypeScript · LangChain · AWS." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230a84ff'/%3E%3Cstop offset='.5' stop-color='%23bf5af2'/%3E%3Cstop offset='1' stop-color='%23ff375f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='42' font-family='-apple-system,Helvetica,Arial' font-size='26' font-weight='700' text-anchor='middle' fill='url(%23g)'%3ETR%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat:wght@400;600;700&family=Dela+Gothic+One&family=REM:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div id="scroll-progress"></div>
+  <!-- Scroll progress -->
+  <div id="scroll-progress" aria-hidden="true"></div>
 
   <!-- Custom cursor -->
-  <div id="cursor"></div>
-  <div id="cursor-follower"></div>
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-follower" aria-hidden="true"></div>
 
-  <!-- ===== HEADER ===== -->
+  <!-- Grain overlay -->
+  <div id="grain" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
   <header id="header">
-    <div id="logo">TR</div>
-
     <nav id="nav">
+      <a href="#inicio" id="logo" aria-label="Início">
+        <span class="logo-mark">TR</span>
+      </a>
+
       <ul id="nav-links">
         <li><a href="#inicio" class="nav-link">Início</a></li>
+        <li><a href="#impacto" class="nav-link">Impacto</a></li>
+        <li><a href="#experiencia" class="nav-link">Experiência</a></li>
         <li><a href="#projetos" class="nav-link">Projetos</a></li>
-        <li><a href="#curriculo" class="nav-link">Currículo</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
       </ul>
+
+      <div class="nav-actions">
+        <a href="https://github.com/TiagoAReiz" class="icon-link" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.66.41.36.78 1.05.78 2.13v3.16c0 .3.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/tiago-reiz-075a702b3" class="icon-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        </a>
+        <a href="mailto:tiagoreizzzz@gmail.com" class="nav-cta magnetic">Fale comigo</a>
+      </div>
+
+      <button id="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
     </nav>
-
-    <div id="social-links">
-      <a href="https://www.linkedin.com/in/tiago-reiz-075a702b3" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <ion-icon name="logo-linkedin"></ion-icon>
-      </a>
-      <a href="https://github.com/TiagoAReiz" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
-        <ion-icon name="logo-github"></ion-icon>
-      </a>
-    </div>
-
-    <button id="mobile-menu-btn" aria-label="Abrir menu">
-      <ion-icon name="menu-outline" id="menu-icon"></ion-icon>
-    </button>
   </header>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu">
-    <button id="mobile-close" aria-label="Fechar menu">
-      <ion-icon name="close-outline"></ion-icon>
-    </button>
+  <div id="mobile-menu" aria-hidden="true">
     <ul>
       <li><a href="#inicio" class="mobile-link">Início</a></li>
+      <li><a href="#impacto" class="mobile-link">Impacto</a></li>
+      <li><a href="#experiencia" class="mobile-link">Experiência</a></li>
       <li><a href="#projetos" class="mobile-link">Projetos</a></li>
-      <li><a href="#curriculo" class="mobile-link">Currículo</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#contato" class="mobile-link">Contato</a></li>
     </ul>
     <div class="mobile-social">
-      <a href="https://www.linkedin.com/in/tiago-reiz-075a702b3" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <ion-icon name="logo-linkedin"></ion-icon>
-      </a>
-      <a href="https://github.com/TiagoAReiz" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
-        <ion-icon name="logo-github"></ion-icon>
-      </a>
+      <a href="https://github.com/TiagoAReiz" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+      <a href="https://www.linkedin.com/in/tiago-reiz-075a702b3" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
     </div>
   </div>
-  <div id="mobile-overlay"></div>
 
   <!-- ===== HERO ===== -->
   <section id="inicio">
-    <div class="hero-bg">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-      <div class="grid-lines"></div>
+    <div class="hero-bg" aria-hidden="true">
+      <div class="aurora aurora-1"></div>
+      <div class="aurora aurora-2"></div>
+      <div class="aurora aurora-3"></div>
+      <div class="hero-glow"></div>
     </div>
 
     <div id="hero-content">
-      <p class="hero-greeting reveal-up">Olá, eu sou</p>
-      <h1 id="nome" class="reveal-up delay-1">Tiago Reiz</h1>
-
-      <div id="tec" class="reveal-up delay-2">
-        <span class="tec">Java</span>
-        <span id="and">&amp;</span>
-        <span class="tec">Spring Boot</span>
-      </div>
-
-      <p id="about" class="reveal-up delay-3">
-        Software Engineer focado em back-end com <strong>Java</strong>, <strong>Spring Boot</strong> e <strong>PostgreSQL</strong>.<br />
-        Atuando com RAG e IA generativa na Superlógica Tecnologias.<br />
-        2x Azure Certified · AWS · Docker · Kubernetes.
+      <p class="hero-eyebrow" data-hero>
+        <span class="status-dot"></span>
+        Superlógica · IA generativa &amp; RAG em produção
       </p>
 
-      <div class="hero-cta reveal-up delay-4">
-        <a href="#projetos" class="btn-primary">Ver Projetos</a>
-        <a href="#curriculo" class="btn-secondary">Meu Currículo</a>
+      <h1 id="hero-name" aria-label="Tiago Reiz">
+        <span class="word" data-hero>Tiago</span>
+        <span class="word grad" data-hero>Reiz</span>
+      </h1>
+
+      <div class="hero-roles" data-hero aria-live="polite">
+        <span id="role-rotator" class="role">Backend Engineer</span>
       </div>
 
-      <div class="floating-badges reveal-up delay-5">
-        <span class="badge">☕ Java</span>
-        <span class="badge">🍃 Spring Boot</span>
-        <span class="badge">🐍 Python</span>
-        <span class="badge">☁️ AWS</span>
-        <span class="badge">🐳 Docker</span>
+      <p class="hero-sub" data-hero>
+        Raiz em <strong>Java / Spring Boot</strong>, atuação diária em <strong>Python</strong> e <strong>NestJS</strong>.
+        Construo plataformas de IA generativa e RAG que saem do slide e entram em <strong>produção</strong> —
+        com código testado, arquitetura limpa e cloud.
+      </p>
+
+      <div class="hero-cta" data-hero>
+        <a href="#projetos" class="btn-primary magnetic">Ver projetos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#experiencia" class="btn-secondary magnetic">Minha trajetória</a>
+      </div>
+
+      <div class="hero-meta" data-hero>
+        <span>São Paulo, Brasil</span>
+        <span class="dot">·</span>
+        <span>Sistemas de Informação — Mackenzie</span>
+        <span class="dot">·</span>
+        <span>2× Microsoft Certified</span>
       </div>
     </div>
 
-    <div class="scroll-indicator">
-      <div class="scroll-mouse">
-        <div class="scroll-wheel"></div>
-      </div>
-      <span>Scroll</span>
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
+  <!-- ===== TECH MARQUEE ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <span>Java</span><i>·</i><span>Spring Boot</span><i>·</i><span>Python</span><i>·</i><span>TypeScript</span><i>·</i><span>NestJS</span><i>·</i><span>FastAPI</span><i>·</i><span>LangChain</span><i>·</i><span>OpenAI</span><i>·</i><span>Gemini</span><i>·</i><span>pgvector</span><i>·</i><span>PostgreSQL</span><i>·</i><span>Redis</span><i>·</i><span>Kafka</span><i>·</i><span>Docker</span><i>·</i><span>Kubernetes</span><i>·</i><span>AWS</span><i>·</i><span>GCP</span><i>·</i><span>Next.js</span><i>·</i>
+      </div>
+      <div class="marquee-group">
+        <span>Java</span><i>·</i><span>Spring Boot</span><i>·</i><span>Python</span><i>·</i><span>TypeScript</span><i>·</i><span>NestJS</span><i>·</i><span>FastAPI</span><i>·</i><span>LangChain</span><i>·</i><span>OpenAI</span><i>·</i><span>Gemini</span><i>·</i><span>pgvector</span><i>·</i><span>PostgreSQL</span><i>·</i><span>Redis</span><i>·</i><span>Kafka</span><i>·</i><span>Docker</span><i>·</i><span>Kubernetes</span><i>·</i><span>AWS</span><i>·</i><span>GCP</span><i>·</i><span>Next.js</span><i>·</i>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STATEMENT (scroll-lit text) ===== -->
+  <section id="statement">
+    <p id="statement-text">
+      Eu não construo demos. Construo <em>sistemas</em> que aguentam produção —
+      backend bem estruturado, pipelines de <em>IA</em> sobre milhares de documentos
+      e arquitetura pensada para <em>escalar</em>.
+    </p>
+  </section>
+
+  <!-- ===== IMPACT / STATS ===== -->
+  <section id="impacto">
+    <div class="section-header">
+      <p class="section-eyebrow reveal">Impacto real</p>
+      <h2 class="section-title reveal">Números que falam<br /><span class="grad">por si só.</span></h2>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card spotlight reveal">
+        <div class="stat-value"><span class="count" data-target="7">0</span>×</div>
+        <p class="stat-label">mais rápido para publicar um PoC em produção — de 1 semana para 1 dia, com arquitetura serverless em AWS Lambda</p>
+      </div>
+      <div class="stat-card spotlight reveal" data-delay="1">
+        <div class="stat-value">+<span class="count" data-target="30">0</span></div>
+        <p class="stat-label">PoCs criados pelo time de produto no Nexus Code — 10 já em uso por clientes reais</p>
+      </div>
+      <div class="stat-card spotlight reveal" data-delay="2">
+        <div class="stat-value">+<span class="count" data-target="2000">0</span></div>
+        <p class="stat-label">documentos processados em pipelines de RAG com LangChain e OpenAI Embeddings</p>
+      </div>
+      <div class="stat-card spotlight reveal" data-delay="3">
+        <div class="stat-value"><span class="count" data-target="8">0</span>→1</div>
+        <p class="stat-label">minutos: tempo de análise de documentos reduzido com RAG + SQL gerado automaticamente</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experiencia">
+    <div class="section-header">
+      <p class="section-eyebrow reveal">Experiência</p>
+      <h2 class="section-title reveal">Onde a IA encontra<br /><span class="grad">a engenharia.</span></h2>
+    </div>
+
+    <div class="xp-card spotlight reveal">
+      <div class="xp-head">
+        <div>
+          <h3>Superlógica Tecnologias</h3>
+          <p class="xp-role">Estagiário de Tecnologia · Barueri, SP</p>
+        </div>
+        <span class="xp-date">abr 2025 — atual</span>
+      </div>
+
+      <div class="xp-products">
+        <article class="xp-product">
+          <div class="xp-product-head">
+            <span class="xp-product-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+            </span>
+            <div>
+              <h4>Nexus Code</h4>
+              <p>Plataforma de PoCs com IA para times não-técnicos, integrada ao ecossistema da empresa</p>
+            </div>
+          </div>
+          <ul class="xp-bullets">
+            <li>Contribuí na arquitetura serverless (AWS Lambda) que reduziu a publicação de um PoC de <strong>1 semana para 1 dia</strong> em produção</li>
+            <li>Adoção pelo time de produto: <strong>+30 PoCs criados</strong> e 10 em uso por clientes</li>
+            <li>Autenticação corporativa com Auth0 e APIs no padrão OpenAPI; frontend em Vite e serviços em Hono</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Vite</span><span class="tag">Hono</span><span class="tag">AWS Lambda</span><span class="tag">Auth0</span><span class="tag">Python</span><span class="tag">OpenAPI</span><span class="tag">Serverless</span>
+          </div>
+        </article>
+
+        <article class="xp-product">
+          <div class="xp-product-head">
+            <span class="xp-product-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>
+            </span>
+            <div>
+              <h4>AI-Docs</h4>
+              <p>Plataforma inteligente de documentos com RAG e chatbot para busca e análise</p>
+            </div>
+          </div>
+          <ul class="xp-bullets">
+            <li>Pipelines de RAG com LangChain e OpenAI Embeddings sobre <strong>+2.000 documentos</strong>, reduzindo a análise de 8 min para 1 min</li>
+            <li>Backend em NestJS e Python, frontend em Next.js; integração de OpenAI Assistants e Gemini API</li>
+            <li>Deploy em AWS (Kubernetes) com PostgreSQL, Redis e S3; observabilidade via Datadog e Grafana</li>
+            <li>Participei de refatorações arquiteturais que reduziram acoplamento e retrabalho, acelerando a entrega</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">NestJS</span><span class="tag">Python</span><span class="tag">Next.js</span><span class="tag">LangChain</span><span class="tag">OpenAI</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Kubernetes</span><span class="tag">AWS</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS (bento) ===== -->
   <section id="projetos">
     <div class="section-header">
-      <h2 class="section-title reveal-up">Projetos</h2>
-      <p class="section-subtitle reveal-up delay-1">Alguns trabalhos que desenvolvi</p>
+      <p class="section-eyebrow reveal">Projetos pessoais</p>
+      <h2 class="section-title reveal">Do design<br /><span class="grad">à entrega.</span></h2>
     </div>
 
-    <div class="projects-grid">
+    <div class="bento">
 
-      <a href="https://github.com/TiagoAReiz/EstudandoJava/" target="_blank" rel="noopener" class="projeto reveal-left">
-        <div class="projeto-img-wrap">
-          <img src="./img/prj3.webp" alt="Auth Fullstack" loading="lazy" />
-          <div class="projeto-overlay">
-            <ion-icon name="open-outline"></ion-icon>
-            <span>Ver Projeto</span>
-          </div>
-          <div class="projeto-number">01</div>
-        </div>
-        <div class="projeto-info">
-          <h3 class="projeto-titulo">Auth Fullstack</h3>
-          <p class="projeto-desc">Sistema fullstack moderno com autenticação JWT, desenvolvido em Java Spring Boot e Angular.</p>
-          <div class="projeto-tags">
-            <span class="tag">Java Spring</span>
-            <span class="tag">Angular</span>
-            <span class="tag">JWT</span>
-            <span class="tag">Spring Security</span>
-          </div>
-          <div class="projeto-link-row">
-            <span class="link-btn">
-              <ion-icon name="logo-github"></ion-icon> GitHub
+      <a href="https://github.com/TiagoAReiz/fastdocs" target="_blank" rel="noopener" class="bento-card bento-lg spotlight tilt reveal">
+        <div class="bento-visual visual-fastdocs" aria-hidden="true">
+          <div class="visual-orbit">
+            <span class="orbit-ring"></span>
+            <span class="orbit-ring r2"></span>
+            <span class="orbit-core">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>
             </span>
           </div>
+        </div>
+        <div class="bento-info">
+          <span class="bento-kicker">RAG multi-tenant</span>
+          <h3>FastDocs</h3>
+          <p>Aplicação RAG multi-tenant com processamento assíncrono de documentos e OCR — do upload à resposta contextual.</p>
+          <div class="tags">
+            <span class="tag">FastAPI</span><span class="tag">pgvector</span><span class="tag">Redis</span><span class="tag">Celery</span><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">Gemini</span><span class="tag">Docker</span>
+          </div>
+          <span class="bento-link">Ver no GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
         </div>
       </a>
 
-      <a href="https://tiagoareiz.github.io/Projeto-1/" target="_blank" rel="noopener" class="projeto reveal-up delay-1">
-        <div class="projeto-img-wrap">
-          <img src="./img/PJ1.png" alt="LinkTree" loading="lazy" />
-          <div class="projeto-overlay">
-            <ion-icon name="open-outline"></ion-icon>
-            <span>Ver Projeto</span>
+      <a href="https://github.com/TiagoAReiz/Ecommerce-Event-Driven" target="_blank" rel="noopener" class="bento-card spotlight tilt reveal" data-delay="1">
+        <div class="bento-visual visual-events" aria-hidden="true">
+          <div class="event-flow">
+            <span class="event-node"></span>
+            <span class="event-stream"></span>
+            <span class="event-node n2"></span>
+            <span class="event-stream s2"></span>
+            <span class="event-node n3"></span>
           </div>
-          <div class="projeto-number">02</div>
         </div>
-        <div class="projeto-info">
-          <h3 class="projeto-titulo">LinkTree</h3>
-          <p class="projeto-desc">LinkTree desenvolvido com a Rocketseat — meu primeiro projeto em desenvolvimento web.</p>
-          <div class="projeto-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
+        <div class="bento-info">
+          <span class="bento-kicker">Design de sistemas</span>
+          <h3>E-commerce Event-Driven</h3>
+          <p>Microsserviços orientados a eventos — Kafka, Outbox pattern e BFF como estudo profundo de arquitetura.</p>
+          <div class="tags">
+            <span class="tag">NestJS</span><span class="tag">Next.js</span><span class="tag">Kafka</span><span class="tag">Redis</span><span class="tag">pgvector</span><span class="tag">Docker</span>
           </div>
-          <div class="projeto-link-row">
-            <span class="link-btn">
-              <ion-icon name="globe-outline"></ion-icon> Demo ao Vivo
-            </span>
-          </div>
+          <span class="bento-link">Ver no GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
         </div>
       </a>
 
-      <a href="https://tiagoareiz.github.io/fitlite/" target="_blank" rel="noopener" class="projeto reveal-right">
-        <div class="projeto-img-wrap">
-          <img src="./img/PJ2.png" alt="FitLite" loading="lazy" />
-          <div class="projeto-overlay">
-            <ion-icon name="open-outline"></ion-icon>
-            <span>Ver Projeto</span>
-          </div>
-          <div class="projeto-number">03</div>
+      <a href="https://github.com/TiagoAReiz/DeliveryNow-Api" target="_blank" rel="noopener" class="bento-card spotlight tilt reveal" data-delay="2">
+        <div class="bento-visual visual-java" aria-hidden="true">
+          <pre class="code-visual"><code><span class="c-kw">@RestController</span>
+<span class="c-kw">public class</span> <span class="c-ty">DeliveryController</span> {
+  <span class="c-kw">@PostMapping</span>(<span class="c-st">"/orders"</span>)
+  <span class="c-ty">ResponseEntity</span>&lt;<span class="c-ty">Order</span>&gt; create(...)
+}</code></pre>
         </div>
-        <div class="projeto-info">
-          <h3 class="projeto-titulo">FitLite</h3>
-          <p class="projeto-desc">Plataforma de dietas e treinos personalizados conforme seus objetivos. Projeto do 1° semestre da faculdade.</p>
-          <div class="projeto-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
+        <div class="bento-info">
+          <span class="bento-kicker">Java raiz</span>
+          <h3>DeliveryNow API</h3>
+          <p>API REST de delivery containerizada, com armazenamento em Azure Blob Storage.</p>
+          <div class="tags">
+            <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Maven</span><span class="tag">Docker</span><span class="tag">Azure Blob</span>
           </div>
-          <div class="projeto-link-row">
-            <span class="link-btn">
-              <ion-icon name="globe-outline"></ion-icon> Demo ao Vivo
-            </span>
-          </div>
+          <span class="bento-link">Ver no GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
         </div>
       </a>
 
     </div>
   </section>
 
-  <!-- ===== RESUME ===== -->
-  <section id="curriculo">
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
     <div class="section-header">
-      <h2 class="section-title reveal-up">Currículo</h2>
-      <p class="section-subtitle reveal-up delay-1">Tiago de Andrade Reiz · São Paulo, Brasil</p>
+      <p class="section-eyebrow reveal">Competências</p>
+      <h2 class="section-title reveal">Um arsenal<br /><span class="grad">completo.</span></h2>
     </div>
 
-    <div id="curriculo-grid">
-
-      <!-- Left column -->
-      <div class="curriculo-col reveal-left">
-
-        <div class="cv-block">
-          <h3 class="cv-block-title">
-            <ion-icon name="person-outline"></ion-icon>
-            Resumo
-          </h3>
-          <p class="cv-summary">
-            Software Engineer focado em back-end com Java, Spring Boot e PostgreSQL, construindo sistemas escaláveis, de alta performance e confiáveis.
-            Atuo na Superlógica Tecnologias contribuindo com soluções de RAG e IA generativa para busca semântica e automação.
-            Experiência sólida em clean architecture, DDD, containerização (Docker e Kubernetes) e deploys em AWS e GCP.
-            2x Azure Certified. Ênfase em qualidade de código, observabilidade e escalabilidade a longo prazo.
-          </p>
-        </div>
-
-        <div class="cv-block">
-          <h3 class="cv-block-title">
-            <ion-icon name="briefcase-outline"></ion-icon>
-            Experiência
-          </h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">Abr/2025 — Presente</span>
-                <h4>Engenheiro de Software</h4>
-                <p class="timeline-company">Superlógica Tecnologias · Barueri, SP</p>
-                <p>Desenvolvimento de plataformas de IA com RAG e IA generativa para busca semântica, automação e eficiência operacional.</p>
-
-                <div class="timeline-projects">
-                  <div class="timeline-project">
-                    <span class="project-label">Nexus Code — AI POC Platform</span>
-                    <p>Plataforma de IA para construção e deploy de POCs autenticados integrados ao ecossistema da empresa. Frontend com Vite, backend com Hono, arquitetura serverless (AWS Lambda), Auth0 e APIs em Python.</p>
-                    <div class="projeto-tags" style="margin-top:8px">
-                      <span class="tag">Vite</span>
-                      <span class="tag">Hono</span>
-                      <span class="tag">AWS Lambda</span>
-                      <span class="tag">Auth0</span>
-                      <span class="tag">Python</span>
-                      <span class="tag">Serverless</span>
-                    </div>
-                  </div>
-                  <div class="timeline-project">
-                    <span class="project-label">AI-Docs — Intelligent Document Platform</span>
-                    <p>Sistema de gestão de documentos com RAG e AI chatbot para busca e análise. Backend com NestJS e Python, pipelines RAG com LangChain e OpenAI Embeddings, deploy em AWS Kubernetes com Datadog e Grafana.</p>
-                    <div class="projeto-tags" style="margin-top:8px">
-                      <span class="tag">NestJS</span>
-                      <span class="tag">Python</span>
-                      <span class="tag">Next.js</span>
-                      <span class="tag">LangChain</span>
-                      <span class="tag">OpenAI</span>
-                      <span class="tag">PostgreSQL</span>
-                      <span class="tag">Redis</span>
-                      <span class="tag">Kubernetes</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cv-block">
-          <h3 class="cv-block-title">
-            <ion-icon name="school-outline"></ion-icon>
-            Formação
-          </h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">Jan/2024 — Dez/2027</span>
-                <h4>Sistemas de Informação</h4>
-                <p class="timeline-company">Universidade Presbiteriana Mackenzie</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cv-block">
-          <h3 class="cv-block-title">
-            <ion-icon name="ribbon-outline"></ion-icon>
-            Certificações
-          </h3>
-          <div class="cert-list">
-            <div class="cert-item">
-              <span class="cert-badge">AZ-900</span>
-              <span>Azure Fundamentals — Microsoft</span>
-            </div>
-            <div class="cert-item">
-              <span class="cert-badge">Office</span>
-              <span>Pacote Office-Microsoft Office Essencial</span>
-            </div>
-            <div class="cert-item">
-              <span class="cert-badge">Git</span>
-              <span>Aprenda Git e Github em 3 dias (2024)</span>
-            </div>
-            <div class="cert-item">
-              <span class="cert-badge">DevOps</span>
-              <span>DevOps BootCamp: Trilha de aprendizado rápido</span>
-            </div>
-            <div class="cert-item">
-              <span class="cert-badge">Angular</span>
-              <span>Angular 9 — Essencial</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cv-block">
-          <h3 class="cv-block-title">
-            <ion-icon name="book-outline"></ion-icon>
-            Cursos
-          </h3>
-          <ul class="cursos-list">
-            <li>Angular 9 Essencial — Cod3r</li>
-            <li>DevOps BootCamp: Trilha All-in-one — Udemy</li>
-            <li>Desenvolvimento Web + Projetos Reais — Udemy</li>
-            <li>Aprenda Git e Github em 3 Dias — Udemy (2024)</li>
-            <li>Banco de Dados SQL — Udemy</li>
-            <li>Fundamentos da Programação Web — Rocketseat</li>
-            <li>Primeiro Datacenter no Azure — Udemy</li>
-          </ul>
-        </div>
-
+    <div class="skills-grid">
+      <div class="skill-group spotlight reveal">
+        <h3>Linguagens</h3>
+        <div class="chips"><span class="chip">Java</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">SQL</span></div>
       </div>
-
-      <!-- Right column -->
-      <div class="curriculo-col reveal-right">
-
-        <div class="cv-block">
-          <h3 class="cv-block-title">
-            <ion-icon name="code-slash-outline"></ion-icon>
-            Competências Técnicas
-          </h3>
-          <div class="skills-grid">
-            <div class="skill-chip">☕ Java</div>
-            <div class="skill-chip">🍃 Spring Boot</div>
-            <div class="skill-chip">🐍 Python</div>
-            <div class="skill-chip">🟦 TypeScript</div>
-            <div class="skill-chip">🐦 NestJS</div>
-            <div class="skill-chip">⚡ Next.js</div>
-            <div class="skill-chip">🗄️ PostgreSQL</div>
-            <div class="skill-chip">🔴 Redis</div>
-            <div class="skill-chip">🐳 Docker</div>
-            <div class="skill-chip">☸️ Kubernetes</div>
-            <div class="skill-chip">☁️ AWS</div>
-            <div class="skill-chip">☁️ Azure</div>
-            <div class="skill-chip">🔗 LangChain</div>
-            <div class="skill-chip">🤖 OpenAI / Gemini</div>
-            <div class="skill-chip">🔐 JWT / Spring Security</div>
-            <div class="skill-chip">📊 Datadog / Grafana</div>
-            <div class="skill-chip">🔑 Google OAuth</div>
-            <div class="skill-chip">🚀 Vercel</div>
-            <div class="skill-chip">🏗️ JPA</div>
-            <div class="skill-chip">🐙 Git / GitHub</div>
-          </div>
-        </div>
-
-        <div class="cv-block">
-          <h3 class="cv-block-title">
-            <ion-icon name="people-outline"></ion-icon>
-            Soft Skills
-          </h3>
-          <div class="soft-skills">
-            <span class="soft-chip">💬 Comunicação</span>
-            <span class="soft-chip">🤝 Trabalho em equipe</span>
-            <span class="soft-chip">🧩 Resolução de problemas</span>
-            <span class="soft-chip">🎯 Comunicação assertiva</span>
-            <span class="soft-chip">🔍 Autoconhecimento</span>
-          </div>
-        </div>
-
-        <div class="cv-block">
-          <h3 class="cv-block-title">
-            <ion-icon name="language-outline"></ion-icon>
-            Idiomas
-          </h3>
-          <div class="languages">
-            <div class="language-item">
-              <span class="lang-name">Inglês</span>
-              <div class="lang-bar-wrap">
-                <div class="lang-bar" data-level="85"></div>
-              </div>
-              <span class="lang-level">Full Professional</span>
-            </div>
-            <div class="language-item">
-              <span class="lang-name">Português</span>
-              <div class="lang-bar-wrap">
-                <div class="lang-bar" data-level="100"></div>
-              </div>
-              <span class="lang-level">Nativo / Bilíngue</span>
-            </div>
-          </div>
-        </div>
-
+      <div class="skill-group spotlight reveal" data-delay="1">
+        <h3>Backend</h3>
+        <div class="chips"><span class="chip">Spring Boot</span><span class="chip">NestJS</span><span class="chip">FastAPI</span><span class="chip">Node.js</span></div>
       </div>
-
+      <div class="skill-group spotlight reveal" data-delay="2">
+        <h3>IA / RAG</h3>
+        <div class="chips"><span class="chip">LangChain</span><span class="chip">OpenAI</span><span class="chip">Gemini</span><span class="chip">pgvector</span><span class="chip">Embeddings</span></div>
+      </div>
+      <div class="skill-group spotlight reveal" data-delay="3">
+        <h3>Frontend</h3>
+        <div class="chips"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Vite</span></div>
+      </div>
+      <div class="skill-group spotlight reveal">
+        <h3>Dados</h3>
+        <div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Amazon S3</span></div>
+      </div>
+      <div class="skill-group spotlight reveal" data-delay="1">
+        <h3>Infra / Cloud</h3>
+        <div class="chips"><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">CI/CD</span></div>
+      </div>
+      <div class="skill-group spotlight reveal" data-delay="2">
+        <h3>Observabilidade &amp; Testes</h3>
+        <div class="chips"><span class="chip">Grafana</span><span class="chip">Datadog</span><span class="chip">JUnit</span><span class="chip">PyTest</span><span class="chip">Jest</span><span class="chip">Vitest</span></div>
+      </div>
+      <div class="skill-group spotlight reveal" data-delay="3">
+        <h3>Arquitetura</h3>
+        <div class="chips"><span class="chip">Clean Architecture</span><span class="chip">DDD</span><span class="chip">Microsserviços</span><span class="chip">Event-Driven</span></div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer id="footer">
-    <div class="footer-bg">
-      <div class="orb orb-f1"></div>
-      <div class="orb orb-f2"></div>
+  <!-- ===== EDUCATION / CERTS / LANGUAGES ===== -->
+  <section id="formacao">
+    <div class="trio-grid">
+      <div class="trio-card spotlight reveal">
+        <span class="trio-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 10 5-10 5L2 8l10-5Z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/></svg>
+        </span>
+        <h3>Formação</h3>
+        <p class="trio-main">Bacharelado em Sistemas de Informação</p>
+        <p class="trio-sub">Universidade Presbiteriana Mackenzie · São Paulo</p>
+        <span class="trio-date">2024 — 2027</span>
+      </div>
+
+      <div class="trio-card spotlight reveal" data-delay="1">
+        <span class="trio-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-2 7 5.5-3 5.5 3-2-7"/></svg>
+        </span>
+        <h3>Certificações</h3>
+        <div class="cert-rows">
+          <div class="cert-row"><span class="cert-badge">AZ-900</span> Microsoft Azure Fundamentals</div>
+          <div class="cert-row"><span class="cert-badge">SC-900</span> Azure Security, Compliance &amp; Identity</div>
+        </div>
+      </div>
+
+      <div class="trio-card spotlight reveal" data-delay="2">
+        <span class="trio-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"/></svg>
+        </span>
+        <h3>Idiomas</h3>
+        <div class="lang-rows">
+          <div class="lang-row">
+            <div class="lang-top"><span>Português</span><span class="lang-lvl">Nativo</span></div>
+            <div class="lang-bar-wrap"><div class="lang-bar" data-level="100"></div></div>
+          </div>
+          <div class="lang-row">
+            <div class="lang-top"><span>Inglês</span><span class="lang-lvl">Profissional pleno</span></div>
+            <div class="lang-bar-wrap"><div class="lang-bar" data-level="85"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <footer id="contato">
+    <div class="footer-bg" aria-hidden="true">
+      <div class="aurora aurora-f"></div>
     </div>
 
     <div class="footer-content">
-      <div class="footer-title reveal-up">
-        <h2>Vamos trabalhar juntos?</h2>
-        <p>Estou aberto a novas oportunidades e colaborações.</p>
-      </div>
+      <p class="section-eyebrow reveal">Próximo capítulo</p>
+      <h2 class="footer-title reveal">Vamos construir<br /><span class="grad">algo grande?</span></h2>
+      <p class="footer-sub reveal">Aberto a oportunidades e colaborações em backend, IA e sistemas distribuídos.</p>
 
-      <div class="footer-cta reveal-up delay-1">
-        <a href="mailto:tiagoreizzzz@gmail.com" class="btn-email">
-          <ion-icon name="mail-outline"></ion-icon>
-          tiagoreizzzz@gmail.com
+      <a href="mailto:tiagoreizzzz@gmail.com" class="btn-email magnetic reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 7L22 7"/></svg>
+        tiagoreizzzz@gmail.com
+      </a>
+
+      <div class="footer-social reveal">
+        <a href="https://github.com/TiagoAReiz" class="icon-link" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.66.41.36.78 1.05.78 2.13v3.16c0 .3.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/tiago-reiz-075a702b3" class="icon-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
         </a>
       </div>
 
-      <div class="footer-social reveal-up delay-2">
-        <a href="https://www.linkedin.com/in/tiago-reiz-075a702b3" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-        <a href="https://github.com/TiagoAReiz" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-      </div>
-
-      <p class="footer-copy">© 2025 Tiago Reiz · Feito com código e café</p>
+      <p class="footer-copy">© 2026 Tiago Reiz · São Paulo · Feito com código, café e obsessão por detalhes</p>
     </div>
   </footer>
 
-  <script src="main.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
