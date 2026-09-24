@@ -1060,6 +1060,74 @@ body.loaded .hero-meta { transition-delay: 0.85s; }
   max-width: 90%;
 }
 
+/* TeAchei browser visual */
+.browser-mock {
+  width: min(360px, 88%);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-soft);
+  background: rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.browser-bar span {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.browser-bar em {
+  margin-left: 10px;
+  font-style: normal;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.browser-body {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.mock-ask strong { color: var(--text); font-weight: 600; }
+
+.mock-offer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.04);
+  animation: offer-in 3.6s var(--ease) infinite;
+}
+
+.mock-offer.o2 { animation-delay: 0.6s; }
+
+.mock-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 10px var(--blue);
+}
+
+.mock-offer.o2 .mock-dot { background: var(--pink); box-shadow: 0 0 10px var(--pink); }
+
+@keyframes offer-in {
+  0%, 10%  { opacity: 0; transform: translateY(6px); }
+  25%, 85% { opacity: 1; transform: none; }
+  100%     { opacity: 0; transform: translateY(-4px); }
+}
+
 .c-kw { color: #ff7ab2; }
 .c-ty { color: #6bc1ff; }
 .c-st { color: #a8e28a; }

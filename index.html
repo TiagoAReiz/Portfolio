@@ -256,9 +256,52 @@
         <div class="bento-info">
           <span class="bento-kicker">RAG multi-tenant</span>
           <h3>FastDocs</h3>
-          <p>Aplicação RAG multi-tenant com processamento assíncrono de documentos e OCR — do upload à resposta contextual.</p>
+          <p>Microsserviço de RAG multi-tenant consumido via API Key. Agente LangGraph que avalia o contexto recuperado e reformula a pergunta quando ele é fraco; ingestão assíncrona com Celery e Transactional Outbox, sem perda de eventos.</p>
           <div class="tags">
-            <span class="tag">FastAPI</span><span class="tag">pgvector</span><span class="tag">Redis</span><span class="tag">Celery</span><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">Gemini</span><span class="tag">Docker</span>
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LangGraph</span><span class="tag">pgvector</span><span class="tag">Celery</span><span class="tag">Redis</span><span class="tag">Docker</span>
+          </div>
+          <span class="bento-link">Ver no GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a href="https://github.com/TiagoAReiz/ecommerce-event-driven-spring" target="_blank" rel="noopener" class="bento-card spotlight tilt reveal" data-delay="1">
+        <div class="bento-visual visual-java" aria-hidden="true">
+          <pre class="code-visual"><code><span class="c-kw">@KafkaListener</span>(topics = <span class="c-st">"payment-events"</span>)
+<span class="c-kw">void</span> on(<span class="c-ty">PaymentFailed</span> e) {
+  saga.<span class="c-ty">compensate</span>(e.orderId());
+  <span class="c-kw">// libera estoque, cancela envio</span>
+}</code></pre>
+        </div>
+        <div class="bento-info">
+          <span class="bento-kicker">Java · Event-driven</span>
+          <h3>E-commerce Event-Driven (Spring)</h3>
+          <p>Loja em microsserviços Spring Boot com saga orquestrada (estoque, pagamento e envio, com compensação) e Transactional Outbox publicado no Kafka via Debezium.</p>
+          <div class="tags">
+            <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Kafka</span><span class="tag">Debezium</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span>
+          </div>
+          <span class="bento-link">Ver no GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a href="https://github.com/TiagoAReiz/MiniEcommerce-Spring-boot" target="_blank" rel="noopener" class="bento-card spotlight tilt reveal" data-delay="2">
+        <div class="bento-visual visual-java" aria-hidden="true">
+          <pre class="code-visual"><code><span class="c-kw">@Test</span>
+<span class="c-kw">void</span> checkoutIsIdempotent() {
+  post(<span class="c-st">"/checkout"</span>, key);
+  post(<span class="c-st">"/checkout"</span>, key);
+  assertThat(orders()).hasSize(<span class="c-st">1</span>);
+}  <span class="c-kw">// 152 testes ✓</span></code></pre>
+        </div>
+        <div class="bento-info">
+          <span class="bento-kicker">Arquitetura hexagonal</span>
+          <h3>MiniEcommerce</h3>
+          <p>E-commerce em Spring Boot 4 com um módulo por agregado: checkout com Mercado Pago, frete via BrasilAPI e 139 testes de integração contra Postgres, Redis e MinIO reais.</p>
+          <div class="tags">
+            <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">S3</span><span class="tag">Flyway</span>
           </div>
           <span class="bento-link">Ver no GitHub
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -278,10 +321,10 @@
         </div>
         <div class="bento-info">
           <span class="bento-kicker">Design de sistemas</span>
-          <h3>E-commerce Event-Driven</h3>
-          <p>Microsserviços orientados a eventos — Kafka, Outbox pattern e BFF como estudo profundo de arquitetura.</p>
+          <h3>Marketplace Event-Driven (NestJS)</h3>
+          <p>Marketplace multi-seller em 9 microsserviços coreografados via Kafka, sem orquestrador central: um checkout vira sub-pedidos por seller, cada um com seu ciclo de pagamento, estoque e envio.</p>
           <div class="tags">
-            <span class="tag">NestJS</span><span class="tag">Next.js</span><span class="tag">Kafka</span><span class="tag">Redis</span><span class="tag">pgvector</span><span class="tag">Docker</span>
+            <span class="tag">TypeScript</span><span class="tag">NestJS</span><span class="tag">Kafka</span><span class="tag">PostgreSQL</span><span class="tag">Prisma</span><span class="tag">Docker</span>
           </div>
           <span class="bento-link">Ver no GitHub
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -300,11 +343,35 @@
         <div class="bento-info">
           <span class="bento-kicker">Java raiz</span>
           <h3>DeliveryNow API</h3>
-          <p>API REST de delivery containerizada, com armazenamento em Azure Blob Storage.</p>
+          <p>API REST de entregas com autenticação JWT, comprovantes com foto no Azure Blob Storage e app mobile do entregador em Expo.</p>
           <div class="tags">
-            <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Maven</span><span class="tag">Docker</span><span class="tag">Azure Blob</span>
+            <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">JWT</span><span class="tag">Azure Blob</span><span class="tag">Docker</span>
           </div>
           <span class="bento-link">Ver no GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a href="https://teachei.shop" target="_blank" rel="noopener" class="bento-card bento-lg spotlight tilt reveal">
+        <div class="bento-visual visual-browser" aria-hidden="true">
+          <div class="browser-mock">
+            <div class="browser-bar"><span></span><span></span><span></span><em>teachei.shop</em></div>
+            <div class="browser-body">
+              <div class="mock-ask">Procuro: <strong>Civic 2020, até R$ 110 mil</strong></div>
+              <div class="mock-offer"><span class="mock-dot"></span>Oferta · R$ 104.900</div>
+              <div class="mock-offer o2"><span class="mock-dot"></span>Oferta · R$ 108.500</div>
+            </div>
+          </div>
+        </div>
+        <div class="bento-info">
+          <span class="bento-kicker">Produto no ar</span>
+          <h3>TeAchei</h3>
+          <p>Marketplace invertido de veículos: o comprador anuncia o carro que quer e os vendedores respondem com ofertas. Next.js com API própria, Prisma e Supabase, deploy contínuo na Vercel.</p>
+          <div class="tags">
+            <span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">Prisma</span><span class="tag">Supabase</span><span class="tag">Vercel</span>
+          </div>
+          <span class="bento-link">Acessar teachei.shop
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
           </span>
         </div>
